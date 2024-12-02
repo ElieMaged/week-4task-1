@@ -6,24 +6,23 @@ import { useEffect, useState } from 'react';
 
 export default function Adtwo() {
 
-const [setProductList, productList] = useState([]);
-[setProductList, productList] as const;
+const [productList, setProductList] = useState<any[]>([]);
 
 
     useEffect(() => {
            getLatestProducts_();
     },[])
 
-    const getLatestProducts_ = () => {
+    const getLatestProducts_ = async () => {
 
         ProductApi.getLatestProducts().then(res => {
-            setProductList(res.data.data)
-            console.log(productList)
+            setProductList(res.data.data);
+           console.log(productList);
         })
     }
 return(
     <>
-<div className='text-4xl text-black'>Today's</div>
+<div className='text-4xl text-black'></div>
     <div className='text-black flex flex-row justify-start mb-10'>
         <h1 className='text-4xl'>Flash Sales</h1>
         <h1 className='text-4xl ml-10 md:ml-40'>03:01:00</h1>
