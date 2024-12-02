@@ -2,18 +2,23 @@
 import Card from '../Card'
 import Image from "next/image";
 import ProductApi from '../../_utils/ProductApi'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Adtwo() {
 
+const [setProductList, productList] = useState([]);
+[setProductList, productList] as const;
+
+
     useEffect(() => {
-getLatestProducts_();
+           getLatestProducts_();
     },[])
 
     const getLatestProducts_ = () => {
 
         ProductApi.getLatestProducts().then(res => {
-            console.log(res.data)
+            setProductList(res.data.data)
+            console.log(productList)
         })
     }
 return(
@@ -27,7 +32,8 @@ return(
     <div className='flex flex-col justify-center'>
     <span className=' gap-x-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-y-5'>
        
-    <Card />
+    <Card
+    />
     <Card />
     <Card />
     </span>
