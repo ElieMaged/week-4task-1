@@ -2,10 +2,9 @@ export default function Navbar() {
     return(
         <>
         <nav className="bg-white border-white-200 dark:bg-white-900 dark:border-white-700 text-black">
-  <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <div className="max-w-screen-xl flex flex-wrap items-center space-x-10 mx-auto p-4">
     <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
-        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">Flowbite</span>
+        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-black m-5">Exclusive</span>
     </a>
     <button data-collapse-toggle="navbar-multi-level" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black-500 rounded-lg md:hidden hover:bg-white-100 focus:outline-none focus:ring-2 focus:ring-white-200 dark:text-black-400 dark:hover:bg-white-700 dark:focus:ring-white-600" aria-controls="navbar-multi-level" aria-expanded="false">
         <span className="sr-only">Open main menu</span>
@@ -35,6 +34,7 @@ export default function Navbar() {
       </ul>
     </div>
   </div>
+  <hr className='' />
 </nav>
 
         </>
