@@ -13,11 +13,11 @@ const [productList, setProductList] = useState<any[]>([]);
            getLatestProducts_();
     },[])
 
-    const getLatestProducts_ = async () => {
+    const getLatestProducts_ = () => {
 
         ProductApi.getLatestProducts().then(res => {
-            setProductList(res.data.data);
-           console.log(productList);
+        res.data.data ? setProductList(res.data.data) : console.log(res.data.data)
+            
         })
     }
 return(
@@ -32,6 +32,7 @@ return(
     <span className=' gap-x-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-y-5'>
        
     <Card
+    productList = {productList}
     />
     <Card />
     <Card />
