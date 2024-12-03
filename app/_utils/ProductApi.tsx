@@ -1,6 +1,6 @@
 import axiosClient from "./axiosClient";
 
-const getLatestProducts = () => axiosClient.get('/products')
+const getLatestProducts = () => axiosClient.get('/products?populate=*')
 
 
 export default {
