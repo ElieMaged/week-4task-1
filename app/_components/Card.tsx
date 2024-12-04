@@ -7,12 +7,12 @@ export default function Card({productList = []}:any) {
         <>    
         {productList.map(item => (
          
-            <div key={item.id} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div key={item.id} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center">
                 <a href="#">
                     <img 
                     src={`http://localhost:1337${item.url.url}`}
                     alt='keyboard'
-                    className='w-100% h-40'
+                    className='w-60 h-60'
                     />
                 </a>
                 {item.title}
