@@ -4,11 +4,7 @@ import "./globals.css";
 import Navbar from './_components/Navbar'
 import Footer from './_components/footer'
 import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
+  ClerkProvider
 } from '@clerk/nextjs'
 
 

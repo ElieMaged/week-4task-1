@@ -1,8 +1,5 @@
-import Image from 'next/image'
 
-
-
-export default function Card({name, pic, id, price, desc}) {
+export default function Card({name, pic, id, price, desc}:any) {
     return(
         <>    
      

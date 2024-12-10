@@ -44,7 +44,7 @@ function ProductOne({params}) {
 
 
     const addCart = () => {
-  
+  localStorage.setItem(`Item`, selectedProduct?.price)
     }
     
 

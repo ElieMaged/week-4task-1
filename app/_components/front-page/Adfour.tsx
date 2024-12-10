@@ -1,5 +1,5 @@
 import Card from '../CardTwo'
-import Image from "next/image";
+
 
 
 export default function Adfour() {
