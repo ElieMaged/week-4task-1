@@ -24,7 +24,7 @@ export default function Navbar() {
     <div className="hidden w-full md:block md:w-auto" id="navbar-multi-level">
       <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-white-100 rounded-lg bg-white-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-white-800 md:dark:bg-white-900 dark:border-white-700">
         <li>
-          <a href="#" className="block py-2 px-3 text-black bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+          <a href="/" className="block py-2 px-3 text-black bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
         </li>
 
     {/* <!-- Dropdown menu --> */}
@@ -35,7 +35,7 @@ export default function Navbar() {
           <a href="#" className="block py-2 px-3 text-black-900 rounded hover:bg-white-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-white-700 dark:hover:text-black md:dark:hover:bg-transparent">Services</a>
         </li>
         <li>
-          <a href="#" className="block py-2 px-3 text-black-900 rounded hover:bg-white-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-white-700 dark:hover:text-black md:dark:hover:bg-transparent">Pricing</a>
+          <a href="/about-us" className="block py-2 px-3 text-black-900 rounded hover:bg-white-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-white-700 dark:hover:text-black md:dark:hover:bg-transparent">About Us</a>
         </li>
         <li>
         <span className="block py-2 px-3 text-black-900 rounded hover:bg-white-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-white-700 dark:hover:text-black md:dark:hover:bg-transparent">
