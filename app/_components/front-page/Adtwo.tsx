@@ -1,14 +1,21 @@
-'use client'
+'use client';
+
+import { useState, useEffect } from 'react';
 import Card from '../Card'
-import Image from "next/image";
-import { useEffect, useState } from 'react';
 
-export default function Adtwo() {
+export default function ProductList() {
+    const [products, setProducts] = useState([]);
 
-const [productList, setProductList] = useState<any[]>([]);
+    useEffect(() => {
+        const fetchProducts = async () => {
+            const response = await fetch('/api/products');
+            const data = await response.json();
+            setProducts(data);
+            console.log(data);
+        };
 
-
-
+        fetchProducts();
+    }, []);
   
 return(
     <>
@@ -20,6 +27,17 @@ return(
     </div>
     <div className='flex flex-col justify-center'>
     <span className=' gap-x-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-y-5'>
+        {products.length > 0 && products.map(prev => {
+            
+            return <Card 
+            name={prev.title}
+            pic={prev.image}
+            id={prev.id}
+            key={prev.id}
+            price={prev.price}
+            desc={prev.description}
+            />
+        })}
 
 
     </span>

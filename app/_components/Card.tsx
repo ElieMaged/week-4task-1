@@ -1,30 +1,26 @@
+import Image from 'next/image'
 
 
 
-export default function Card() {
+export default function Card({name, pic, id, price, desc}) {
     return(
         <>    
      
          
-            <div className="max-w-sm text-black bg-white text-center border border-gray-200 rounded-lg shadow dark:bg-gray-600  flex flex-col items-center hover:bg-gray-900 hover:shadow-md hover:p-1 hover:border-gray-900 ">
-                <a href="#">
-                    <img 
-                    src=''
-                    alt='keyboard'
-                    className='w-60 h-60 rounded-lg'
-                    />
-                </a>
-                <h1 className='text-white'>
+            <div className="max-w-sm text-black bg-white text-center border border-gray-200 rounded-lg shadow dark:bg-gray-600  flex flex-col items-center hover:bg-gray-900 hover:shadow-md hover:p-1 hover:border-gray-900">
             
-         
+                
+                <h1 className='text-white'>
+            {name}
                 </h1>
-              
+              <img className=' w-60 h-60 ' src={pic} alt="" />
                 <div className="p-5">
-                    <a href="#">
+                    <a href={id}>
                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"></h5>
                     </a>
-                    <p className="mb-3 font-normal text-white "></p>
-                    <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <p className="mb-3 font-normal text-white ">{price}$</p>
+                    <p className='mb-3 font-normal text-white '>{desc}</p>
+                    <a href={`product-details/${id}`} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         Read more
                         <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
