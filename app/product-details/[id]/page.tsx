@@ -8,6 +8,17 @@ function ProductOne({params}) {
     
     const productId = React.use(params).id ? parseInt(React.use(params).id) : null;
 
+
+
+
+
+
+
+
+
+
+
+
     useEffect(() => {
         const fetchProducts = async () => {
             try {
@@ -25,9 +36,17 @@ function ProductOne({params}) {
         fetchProducts();
     }, []);
 
+
+
     const selectedProduct = products.find(product => product.id === productId);
 
     const imagy = selectedProduct?.image
+
+
+    const addCart = () => {
+  
+    }
+    
 
     console.log('Product ID:', productId);
     console.log('All Products:', products);
@@ -89,7 +108,7 @@ function ProductOne({params}) {
         </span>
         <span>
          
-        <button className="m-5 bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">
+        <button onClick={addCart} className="m-5 bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">
   Add to cart
 </button>
 
