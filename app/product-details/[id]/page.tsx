@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react'
 function ProductOne({params}) {
     const [products, setProducts] = useState([]);  
     const [isLoading, setIsLoading] = useState(true);
+    
     const productId = React.use(params).id ? parseInt(React.use(params).id) : null;
 
     useEffect(() => {

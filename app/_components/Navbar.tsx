@@ -1,6 +1,16 @@
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
+
+
 export default function Navbar() {
     return(
         <>
+        
         <nav className="bg-white border-white-200 dark:bg-white-900 dark:border-white-700 text-black">
   <div className="max-w-screen-xl flex flex-wrap items-center space-x-10 mx-auto p-4">
     <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -29,11 +39,19 @@ export default function Navbar() {
           <a href="#" className="block py-2 px-3 text-black-900 rounded hover:bg-white-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-white-700 dark:hover:text-black md:dark:hover:bg-transparent">Pricing</a>
         </li>
         <li>
-          <a href="#" className="block py-2 px-3 text-black-900 rounded hover:bg-white-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-white-700 dark:hover:text-black md:dark:hover:bg-transparent">Contact</a>
+        <span className="block py-2 px-3 text-black-900 rounded hover:bg-white-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-white-700 dark:hover:text-black md:dark:hover:bg-transparent">
+        <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+      </span>
         </li>
       </ul>
     </div>
   </div>
+
   <hr className='' />
 </nav>
 
