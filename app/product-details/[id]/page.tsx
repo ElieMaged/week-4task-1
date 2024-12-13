@@ -8,17 +8,6 @@ function ProductOne({params}) {
     
     const productId = React.use(params).id ? parseInt(React.use(params).id) : null;
 
-
-
-
-
-
-
-
-
-
-
-
     useEffect(() => {
         const fetchProducts = async () => {
             try {
@@ -44,7 +33,22 @@ function ProductOne({params}) {
 
 
     const addCart = () => {
-  localStorage.setItem(`Item`, selectedProduct?.price)
+let oldEntries:any = localStorage.getItem('cart');
+oldEntries !== null ? oldEntries = JSON.parse(oldEntries) : oldEntries = [];
+oldEntries.push(
+  {
+   'title':selectedProduct?.title,
+   'price':selectedProduct?.price,
+   'pic':selectedProduct?.image,
+   'id':selectedProduct?.id
+  }
+);
+localStorage.setItem('cart', JSON.stringify(oldEntries))
+console.log(localStorage.getItem('cart'))
+window.alert(`${selectedProduct?.title} has been added to your cart!`);
+
+
+
     }
     
 

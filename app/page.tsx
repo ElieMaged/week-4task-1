@@ -8,7 +8,11 @@ import Adsix from './_components/front-page/Adsix'
 import IMAGE from '../media/homePage/3.png'
 
 
+
+
+
 export default function Home() {
+
   return (
     <>
     <div className='flex flex-col p-20'>

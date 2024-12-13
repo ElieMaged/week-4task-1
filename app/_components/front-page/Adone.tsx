@@ -8,7 +8,7 @@ import Dropdown from '../Dropdown'
 export default function Adone() {
     return(
         <>
-        <div className='sm:grid sm:grid-cols-6 text-black sm:flex sm:flex-row mb-10'>
+        <div className='sm:grid sm:grid-cols-6 text-black sm:flex-row mb-10'>
             <div className='adOne-first'>
 
 <ul className=' gap-y-3 w-50  flex flex-col col-span-1'>

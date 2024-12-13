@@ -7,7 +7,7 @@ import {
   TrashIcon,
 } from '@heroicons/react/16/solid'
 
-export default function Example(props) {
+export default function Example(props:any) {
   return (
     <div className="text-left text-black">
       <Menu>
