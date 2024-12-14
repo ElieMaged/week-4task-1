@@ -1,3 +1,4 @@
+'use client'
 /* eslint-disable */
 
 import React from 'react'
@@ -5,8 +6,9 @@ import ShoppingCard from '../cart/ShoppingCard'
 
 
 function Shop() {
-  if(typeof window !== 'undefined' && localStorage && localStorage.getItem('cart') == null) {
-    console.log(localStorage.getItem('cart'))
+
+  if(typeof window !== 'undefined' && window.localStorage && localStorage.getItem('cart') == null || []) {
+    
 return <h1 className='text-black'>Your shopping cart is empty!</h1>
   } else {
 
