@@ -1,5 +1,5 @@
-
-export default function Card({name, pic, id, price, desc}:any) {
+/* eslint-disable */
+export default function Card({name, pic, id, price, desc}) {
     return(
         <>    
      
