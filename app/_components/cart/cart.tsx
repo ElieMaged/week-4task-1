@@ -5,12 +5,12 @@ import ShoppingCard from '../cart/ShoppingCard'
 
 
 function Shop() {
-  if(localStorage.getItem('cart') == null || []) {
+  if(window.localStorage.getItem('cart') == null || []) {
 return <h1 className='text-black'>Your shopping cart is empty!</h1>
   } else {
 
   
-const jsonProduct:any = localStorage.getItem('cart')
+const jsonProduct:any = window.localStorage.getItem('cart')
 const cartProduct = JSON.parse(jsonProduct)
   return (
     <div>
