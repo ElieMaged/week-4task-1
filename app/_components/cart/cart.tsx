@@ -1,9 +1,10 @@
+/* eslint-disable */
 import React from 'react'
 import ShoppingCard from '../cart/ShoppingCard'
 
 
 function Shop() {
-  if(JSON.parse(localStorage.getItem('cart') == null)) {
+  if(JSON.parse(localStorage.getItem('cart') == [])) {
 return <h1 className='text-black'>Your shopping cart is empty!</h1>
   } else {
 

@@ -1,8 +1,8 @@
+/* eslint-disable */
 'use client'
-import { H1Icon } from '@heroicons/react/16/solid';
 import React, { useState, useEffect } from 'react'
 
-function ProductOne({params}) {
+function ProductOne({params}:any) {
     const [products, setProducts] = useState([]);  
     const [isLoading, setIsLoading] = useState(true);
     

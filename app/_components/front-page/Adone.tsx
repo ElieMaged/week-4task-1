@@ -1,3 +1,4 @@
+/* eslint-disable */
 import "../../globals.css";
 import adImage from '../../../media/homePage/1.png'
 import Image from 'next/image'

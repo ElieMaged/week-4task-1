@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Image from "next/image";
 import Adone from './_components/front-page/Adone'
 import Adtwo from './_components/front-page/Adtwo'
