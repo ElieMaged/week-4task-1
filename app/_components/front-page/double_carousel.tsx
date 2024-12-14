@@ -2,7 +2,7 @@
 'use client'
 import { useState } from "react";
 
-const TripleRowCardCarousel = ({ items }) => {
+const TripleRowCardCarousel = ({ items }:any) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerRow = 3; // Number of cards per row
 

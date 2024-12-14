@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import Card from '../Card'
 
 export default function ProductList() {
-    const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState<any []>([]);
 
     useEffect(() => {
         const fetchProducts = async () => {

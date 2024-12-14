@@ -1,10 +1,11 @@
 /* eslint-disable */
+'use client'
 import React from 'react'
 import ShoppingCard from '../cart/ShoppingCard'
 
 
 function Shop() {
-  if(localStorage.getItem('cart') == null) {
+  if(localStorage.getItem('cart') == null || []) {
 return <h1 className='text-black'>Your shopping cart is empty!</h1>
   } else {
 
