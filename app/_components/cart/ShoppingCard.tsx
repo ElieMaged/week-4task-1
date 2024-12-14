@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from 'react'
 
-function ShoppingCard({name, price, pic}) {
+function ShoppingCard({name, price, pic}:any) {
   return (
     <div>
       

@@ -4,16 +4,17 @@ import ShoppingCard from '../cart/ShoppingCard'
 
 
 function Shop() {
-  if(JSON.parse(localStorage.getItem('cart') == [])) {
+  if(localStorage.getItem('cart') == null) {
 return <h1 className='text-black'>Your shopping cart is empty!</h1>
   } else {
 
   
-const cartProduct = JSON.parse(localStorage.getItem('cart'))
+const jsonProduct:any = localStorage.getItem('cart')
+const cartProduct = JSON.parse(jsonProduct)
   return (
     <div>
       <ul>
-      {cartProduct.map((product:[], id:number) => {
+      {cartProduct.map((product:any, id:number) => {
  
         return <li key={id}>
         <ShoppingCard

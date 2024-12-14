@@ -30,7 +30,7 @@ return(
     <span className=' gap-x-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-y-5'>
         {products.length > 0 && products.map(prev => {
             
-            return <Card 
+            return <Card
             name={prev.title}
             pic={prev.image}
             id={prev.id}
