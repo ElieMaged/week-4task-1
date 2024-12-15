@@ -7,7 +7,7 @@ import ShoppingCard from '../cart/ShoppingCard'
 
 function Shop() {
 
-  if(typeof window !== 'undefined' && localStorage && localStorage.getItem('cart') ==  null) {
+  if(typeof window !== 'undefined' && window.localStorage && window.localStorage.getItem('cart') ==  null) {
     
 return <h1 className='text-black'>Your shopping cart is empty!</h1>
   } else {
