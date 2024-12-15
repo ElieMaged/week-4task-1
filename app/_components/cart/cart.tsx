@@ -10,8 +10,11 @@ function Shop() {
 
   useEffect(() => {
     typeof localStorage == 'undefined' ? isLoaded(false) : isLoaded(true)
-  })
-
+  }) 
+const clearCart = () => {
+  localStorage.clear();
+  location.reload();
+}
 
   if(!loaded) {
     
@@ -25,7 +28,7 @@ const cartProduct = JSON.parse(jsonProduct)
   return (
     <div>
       <ul>
-      {cartProduct.map((product:any, id:number) => {
+      {cartProduct && cartProduct.map((product:any, id:number) => {
  
         return <li key={id}>
         <ShoppingCard
@@ -37,6 +40,10 @@ const cartProduct = JSON.parse(jsonProduct)
                </li>
       }) }
       </ul>
+      {!cartProduct && <h1 className='text-black'>Your shopping cart is empty!</h1>}
+      {cartProduct && <button onClick = {clearCart} className="m-5 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded">
+  Clear Cart
+</button>}
     </div>
   )
 }
