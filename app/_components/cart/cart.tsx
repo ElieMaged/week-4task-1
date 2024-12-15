@@ -1,14 +1,19 @@
 'use client'
 /* eslint-disable */
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import ShoppingCard from '../cart/ShoppingCard'
 
-
 function Shop() {
+  const [loaded, isLoaded] = useState(false)
 
 
-  if(typeof localStorage == 'undefined' || localStorage && localStorage.getItem('cart') ==  null) {
+  useEffect(() => {
+    typeof localStorage == 'undefined' ? isLoaded(false) : isLoaded(true)
+  })
+
+
+  if(!loaded) {
     
 return <h1 className='text-black'>Your shopping cart is empty!</h1>
   } else {
