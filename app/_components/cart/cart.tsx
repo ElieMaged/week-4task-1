@@ -3,14 +3,18 @@
 
 import React, { useEffect, useState } from 'react'
 import ShoppingCard from '../cart/ShoppingCard'
+import { preventOverflow } from '@popperjs/core'
 
 function Shop() {
   const [loaded, isLoaded] = useState(false)
+  const [total, setTotal] = useState()
 
 
   useEffect(() => {
-    typeof localStorage == 'undefined' ? isLoaded(false) : isLoaded(true)
-  }) 
+    typeof localStorage == 'undefined' ? isLoaded(false) : isLoaded(true);
+    
+  },[]) 
+
 const clearCart = () => {
   localStorage.clear();
   location.reload();
@@ -22,8 +26,13 @@ return <h1 className='text-black'>Your shopping cart is empty!</h1>
   } else {
 
   
-const jsonProduct:any = window.localStorage.getItem('cart')
-const cartProduct = JSON.parse(jsonProduct)
+const jsonProduct:any = window.localStorage.getItem('cart');
+const cartProduct = JSON.parse(jsonProduct);
+const total:[] = [];
+cartProduct && cartProduct.forEach(prev => total.push(prev.price));
+let newTotal = cartProduct ? total.reduce((acc, num) => acc + num) : 0;
+console.log(newTotal)
+
 
   return (
     <div>
@@ -40,10 +49,15 @@ const cartProduct = JSON.parse(jsonProduct)
                </li>
       }) }
       </ul>
+      <h1 className='text-black'>
+      Subtotal = {Math.round(newTotal)}$
+      </h1>
+      <br />
       {!cartProduct && <h1 className='text-black'>Your shopping cart is empty!</h1>}
       {cartProduct && <button onClick = {clearCart} className="m-5 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded">
   Clear Cart
 </button>}
+
     </div>
   )
 }
