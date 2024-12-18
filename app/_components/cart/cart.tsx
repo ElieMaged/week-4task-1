@@ -51,7 +51,7 @@ console.log(newTotal)
       </ul>
       <h1 className='text-black'>
       Subtotal = {Math.round(newTotal)}$
-      </h1>
+      </h1>q
       <br />
       {!cartProduct && <h1 className='text-black'>Your shopping cart is empty!</h1>}
       {cartProduct && <button onClick = {clearCart} className="m-5 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded">
