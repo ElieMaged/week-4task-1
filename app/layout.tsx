@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -40,6 +40,6 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
-    </ClerkProvider>
+
   );
 }
