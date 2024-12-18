@@ -6,7 +6,7 @@ function ProductOne({params}:any) {
     const [products, setProducts] = useState<any[]>([]);  
     const [isLoading, setIsLoading] = useState(true);
     //@ts-ignore
-    const productId:any = React.use(params)?.id ? parseInt(React.use(params)?.id) : null;
+    const productId:any = params.id ? parseInt(params?.id) : null;
 
     useEffect(() => {
         const fetchProducts = async () => {
