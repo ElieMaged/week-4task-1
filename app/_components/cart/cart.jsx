@@ -1,18 +1,22 @@
 'use client'
-/* eslint-disable */
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+
 
 import React, { useEffect, useState } from 'react'
-import ShoppingCard from '../cart/ShoppingCard'
-import { preventOverflow } from '@popperjs/core'
+import ShoppingCard from './ShoppingCard'
 
 function Shop() {
   const [loaded, isLoaded] = useState(false)
-  const [total, setTotal] = useState()
 
 
   useEffect(() => {
-    typeof localStorage == 'undefined' ? isLoaded(false) : isLoaded(true);
+
+    const call = () => {
+      return typeof localStorage == 'undefined' ? isLoaded(false) : isLoaded(true);
+    }
+
     
+    call()
   },[]) 
 
 const clearCart = () => {
@@ -26,10 +30,12 @@ return <h1 className='text-black'>Your shopping cart is empty!</h1>
   } else {
 
   
-const jsonProduct:any = window.localStorage.getItem('cart');
+const jsonProduct = window.localStorage.getItem('cart');
 const cartProduct = JSON.parse(jsonProduct);
-const total:[] = [];
-cartProduct && cartProduct.forEach(prev => total.push(prev.price));
+const total = [];
+ // eslint-disable-next-line
+cartProduct && cartProduct.forEach((prev) => total.push(prev.price));
+ // eslint-disable-next-line
 let newTotal = cartProduct ? total.reduce((acc, num) => acc + num) : 0;
 console.log(newTotal)
 
@@ -37,7 +43,7 @@ console.log(newTotal)
   return (
     <div>
       <ul>
-      {cartProduct && cartProduct.map((product:any, id:number) => {
+      {cartProduct && cartProduct.map((product, id) => {
  
         return <li key={id}>
         <ShoppingCard
