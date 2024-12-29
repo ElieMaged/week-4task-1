@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/_components/front-page/Adtwo.jsx", "app/page.tsx", "app/product-details/[productId]/page.jsx", "app/api/route.js", "app/_components/front-page/Adone.jsx", "app/_components/cart/cart.jsx", "app/product-details/[id]/page.jsx"],
+  "include": ["next-env.d.js", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/_components/front-page/Adtwo.jsx", "app/page.tsx", "app/product-details/[productId]/page.jsx", "app/api/route.js", "app/_components/front-page/Adone.jsx", "app/_components/cart/cart.jsx", "app/product-details/[id]/page.jsx", "next.config.js"],
   "exclude": ["node_modules"]
 }
