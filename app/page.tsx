@@ -8,7 +8,7 @@ import Adfive from './_components/front-page/Adfive'
 import Adsix from './_components/front-page/Adsix'
 import IMAGE from '../media/homePage/3.png'
 
-import {store} from './_components/redux/state'
+import {store} from './_components/state/store'
 import { Provider } from "react-redux";
 
 
