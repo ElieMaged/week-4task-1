@@ -10,7 +10,7 @@ export default function Navbar() {
   const [isLogged, setIsLogged] = useState()
 
   useEffect(() => {
-    const loggy = JSON.parse(localStorage.getItem('login'));
+    const loggy = localStorage.getItem('login') ? JSON.parse(localStorage.getItem('login') as string) : null;
     setIsLogged(loggy);
 
   },[])

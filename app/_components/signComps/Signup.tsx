@@ -6,17 +6,17 @@ import { useRouter } from 'next/navigation'
 
 function Signup() {
   const {push} = useRouter();
-  const valid = require('validator');
 
   const [loggedIn,setLoggedIn] = useState(false)
-  // const [email, setEmail] = useState('')
-  // const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
-  const handleLogin = (e:any) => {
+  const handleLogin = (e) => {
+    console.log(email, password, loggedIn)
 e.preventDefault();
 setLoggedIn(true);
-JSON.stringify(localStorage.setItem('login', true));
-const loggy = JSON.parse(localStorage.getItem('login'));
+JSON.stringify(localStorage.setItem('login', 'true'));
+const loggy = localStorage.getItem('login') ? JSON.parse(localStorage.getItem('login') as string) : null;
 console.log(loggy);
 push('/');
   }

@@ -8,7 +8,6 @@ import Adfive from './_components/front-page/Adfive'
 import Adsix from './_components/front-page/Adsix'
 import IMAGE from '../media/homePage/3.png'
 
-import {store} from './_components/state/store'
 import { Provider } from "react-redux";
 
 
@@ -21,7 +20,7 @@ export default function Home() {
     <>
     
     <div className='flex flex-col p-20'>
-    <Provider store={store}>
+
     <Adone />
     <Adtwo />
     <Adthree />
@@ -34,7 +33,6 @@ export default function Home() {
     />
     <Adfive />
     <Adsix />
-    </Provider>
     </div>
   
     </>
