@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 
 function Signup() {
   const {push} = useRouter();
-
+s
   const [loggedIn,setLoggedIn] = useState(false)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
